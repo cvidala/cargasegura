@@ -38,6 +38,28 @@
       "purpose": "any"
     }
   ],
-  "screenshots": [],
+  "screenshots": [
+    {
+      "src": "screenshot-1.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Pantalla principal — Mi Carga"
+    },
+    {
+      "src": "screenshot-2.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Carga activa con materiales y peso total"
+    },
+    {
+      "src": "screenshot-3.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Búsqueda en tiempo real"
+    }
+  ],
   "shortcuts": []
 }
