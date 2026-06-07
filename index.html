@@ -1473,7 +1473,7 @@
                     const item = MATERIAL_MASTER.find(i => i.id === itemId);
 
                     if (qtyEl) qtyEl.textContent = newVal;
-                    if (subtotalEl && item) subtotalEl.textContent = `${newVal * item.weight} kg`;
+                    if (subtotalEl && item) subtotalEl.textContent = `${(newVal * item.weight).toFixed(1).replace('.0', '')} kg`;
                     
                     if (cardEl) {
                         if (newVal > 0) {
