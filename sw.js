@@ -1,4 +1,4 @@
-const CACHE = 'cargasegura-v2';
+const CACHE = 'cargasegura-v3';
 const ASSETS = [
     './',
     './index.html',
