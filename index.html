@@ -335,6 +335,13 @@
             display: none;
         }
 
+        @media (max-width: 420px) {
+            .presets-row {
+                -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+                mask-image: linear-gradient(to right, black 80%, transparent 100%);
+            }
+        }
+
         .preset-btn {
             display: flex;
             flex-direction: column;
@@ -1199,7 +1206,7 @@
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="toast-container">
+    <div id="toast" class="toast-container" aria-hidden="true" aria-live="polite">
         <span class="material-symbols-outlined toast-icon">content_copy</span>
         <span id="toast-message">Copiado al portapapeles</span>
     </div>
@@ -1794,7 +1801,10 @@
                 }, 1200);
             }).catch(err => {
                 console.error('Fallo al copiar', err);
-                showToast('No se pudo copiar automáticamente', 'error');
+                const encodedText = encodeURIComponent(text);
+                const whatsappUrl = `https://api.whatsapp.com/send?text=${encodedText}`;
+                showToast('Abriendo WhatsApp...', 'share');
+                setTimeout(() => { window.open(whatsappUrl, '_blank'); }, 600);
             });
         }
 
@@ -1815,9 +1825,11 @@
             }
 
             dom.toast.classList.add('active');
+            dom.toast.setAttribute('aria-hidden', 'false');
 
             toastTimeout = setTimeout(() => {
                 dom.toast.classList.remove('active');
+                dom.toast.setAttribute('aria-hidden', 'true');
             }, 3000);
         }
         // ── PWA: Service Worker ──────────────────────────────────────
