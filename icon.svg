@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Cargo box -->
+  <rect x="72" y="218" width="258" height="132" rx="18" fill="#10b981"/>
+  <!-- Cabin -->
+  <rect x="330" y="256" width="114" height="94" rx="14" fill="#059669"/>
+  <!-- Window -->
+  <rect x="344" y="270" width="70" height="44" rx="8" fill="#a7f3d0"/>
+  <!-- Rear wheel -->
+  <circle cx="160" cy="382" r="38" fill="#0f172a" stroke="#10b981" stroke-width="10"/>
+  <circle cx="160" cy="382" r="15" fill="#10b981"/>
+  <!-- Front wheel -->
+  <circle cx="382" cy="382" r="38" fill="#0f172a" stroke="#10b981" stroke-width="10"/>
+  <circle cx="382" cy="382" r="15" fill="#10b981"/>
+  <!-- kg text on cargo -->
+  <text x="201" y="302" font-family="'Arial Black', Arial, sans-serif" font-size="68" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="middle">kg</text>
+  <!-- Check badge top-right -->
+  <circle cx="390" cy="122" r="52" fill="#0f172a"/>
+  <circle cx="390" cy="122" r="44" fill="#10b981"/>
+  <polyline points="371,122 384,136 412,106" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
