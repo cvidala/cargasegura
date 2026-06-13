@@ -1771,7 +1771,11 @@
             
             message += `\nGenerado con *CargaSegura* 📱`;
 
-            if (navigator.share) {
+            if (window.CargaSeguraNative) {
+                // App Android (WebView): delega al selector nativo de Android
+                window.CargaSeguraNative.postMessage(message);
+                triggerHapticFeedback(10);
+            } else if (navigator.share) {
                 navigator.share({
                     title: 'Resumen de Carga - CargaSegura',
                     text: message
